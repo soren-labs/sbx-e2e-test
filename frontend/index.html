@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f1ea" />
+    <title>Today’s tasks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="todo-card" aria-labelledby="page-title">
+        <header class="hero">
+          <p class="eyebrow">A little progress, every day</p>
+          <h1 id="page-title">Today’s tasks<span class="title-dot">.</span></h1>
+          <p class="intro">Capture what matters and make room for what’s next.</p>
+        </header>
+
+        <form class="add-form" id="add-form">
+          <label class="sr-only" for="new-todo">What needs doing?</label>
+          <input id="new-todo" name="title" type="text" maxlength="200" placeholder="What needs doing?" autocomplete="off" required />
+          <button class="add-button" type="submit" aria-label="Add task">Add <span aria-hidden="true">+</span></button>
+        </form>
+
+        <div class="status-row">
+          <p id="task-count" class="task-count" aria-live="polite">0 tasks remaining</p>
+          <p id="connection-status" class="connection-status" aria-live="polite">Connecting…</p>
+        </div>
+
+        <ul id="todo-list" class="todo-list" aria-label="Todo list"></ul>
+
+        <div id="empty-state" class="empty-state">
+          <span class="empty-icon" aria-hidden="true">✦</span>
+          <p>Your list is clear.</p>
+          <span>Add a task to get started.</span>
+        </div>
+      </section>
+      <p class="footer-note">Keep going, one thing at a time.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

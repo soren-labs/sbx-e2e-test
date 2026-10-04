@@ -1,0 +1,1 @@
+SBX GitHub App installation smoke test
